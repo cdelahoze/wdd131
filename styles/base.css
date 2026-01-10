@@ -1,0 +1,152 @@
+body {
+    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+}
+
+h2 {
+    margin: 0;
+    padding: 0;
+    padding: 0.75rem;
+    text-align: center;
+    color: #ffffff;
+    background-color: #06a6c2;
+    font-size: 2vw;
+}
+
+h1 {
+    margin: 0;
+    padding: 0;
+    padding: 0.75rem;
+    text-align: center;
+}
+
+.navigation { 
+    display: flex;
+    align-items: center;
+}
+
+.navigation a {
+    display: block;
+    color: #ffffff;
+    padding: 0.75rem;
+    font-size: 1.5vw;
+    text-decoration: none;
+    text-align: center;
+    flex: 1 1 auto;
+    background-color: #047286;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.navigation a:hover {
+    background-color: #06a6c2;
+    color: #fff;
+}
+
+/* Main content */
+
+main {
+    padding: 1rem;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.parent {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.section {
+    padding: 2rem;
+    border-radius: 10px;
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+}
+
+.section h3 {
+    margin-top: 0;
+    color: #ffffff;
+    background-color: #2c5f77;
+    padding: 1rem;
+    margin: -2rem -2rem 1.5rem -2rem;
+    border-radius: 10px 10px 0 0;
+    text-align: center;
+}
+
+.section h4 {
+    margin: 1.5rem 0 1rem 0;
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+/* About Me section */
+
+.about-content {
+    display: flex;
+    gap: 2rem;
+    align-items: flex-start;
+}
+
+.about-text {
+    flex: 1;
+}
+
+.profile-img {
+    width: 200px;
+    height: auto;
+    border: 2px solid #2c5f77;
+    border-radius: 5px;
+}
+
+.flag-section {
+    text-align: center;
+    margin: 1.5rem 0;
+}
+
+.flag {
+    width: 150px;
+    border: 1px solid #ccc;
+    display: block;
+    margin: 0 auto 0.5rem auto;
+}
+
+.flag-caption {
+    font-style: italic;
+    font-size: 0.9rem;
+    color: #666;
+}
+
+/* Resources section */
+
+.secondary ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.secondary li {
+    margin-bottom: 0.8rem;
+}
+
+.secondary a {
+    color: #2c5f77;
+    text-decoration: none;
+}
+
+.secondary a:hover {
+    text-decoration: underline;
+}
+/* footer */
+
+footer {
+    text-align: center;
+    font-size: 0.75rem;
+    margin-top: 1rem;
+    padding: 1rem;
+    border-top: 1px solid #cccccc;
+    color: #ffffff;
+    background-color: #06a6c2;
+}
+footer p {
+    margin: 0.25rem 0;
+}
