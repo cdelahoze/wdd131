@@ -91,10 +91,11 @@ main {
 
 .text2 {
     text-align: justify;
+    font-size: 1.4vw;
 }
 
 .profile-img {
-    width: 200px;
+    width: 18vw;
     height: auto;
     border: 2px solid #2c5f77;
     border-radius: 5px;
@@ -106,7 +107,8 @@ main {
 }
 
 .flag {
-    width: 150px;
+    width: 15vw;
+    height: auto;
     border: 1px solid #ccc;
     display: block;
     margin: 0 auto 0.5rem auto;
