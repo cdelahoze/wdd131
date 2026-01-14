@@ -134,6 +134,7 @@ main {
 .secondary a:hover {
     text-decoration: underline;
 }
+
 /* footer */
 
 footer {
@@ -145,6 +146,7 @@ footer {
     color: #ffffff;
     background-color: #06a6c2;
 }
+
 footer p {
     margin: 0.25rem 0;
 }
