@@ -115,7 +115,7 @@ main {
 .flag-caption {
     font-style: italic;
     font-size: 0.9rem;
-    color: #666;
+    color: #333;
 }
 
 /* Resources section */
@@ -131,7 +131,7 @@ main {
 }
 
 .secondary a {
-    color: #2c5f77;
+    color: #1a4456;
     text-decoration: none;
 }
 
