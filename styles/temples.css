@@ -36,15 +36,19 @@ header h2 {
   order: 3;
 }
 
+nav,
 .navigation {
-  display: none;
+  display: flex;
   flex-direction: column;
   width: 100%;
   order: 4;
 }
 
-.navigation.open {
-  display: flex;
+/* Ocultar en móvil hasta que se haga clic */
+@media (max-width: 767px) {
+  .navigation:not(.open) {
+    display: none;
+  }
 }
 
 .navigation a {
