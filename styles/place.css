@@ -1,0 +1,186 @@
+:root {
+  /* Colores principales */
+  --primary-blue: #2563eb;
+  --dark-blue: #1e40af;
+  --light-blue: #60a5fa;
+  --very-light-blue: #dbeafe;
+
+  /* Colores neutrales */
+  --dark-gray: #ef0808;
+  --medium-gray: #6b7280;
+  --light-gray: #f3f4f6;
+  --white: #ffffff;
+  --orange: #ffd400;
+}
+
+/* ===== ESTILOS GENERALES ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Roboto, helvetica, sans-serif;
+  color: var(--dark-gray);
+  background-color: var(--white);
+}
+
+/* ===== HEADER ===== */
+header {
+  background: linear-gradient(135deg, var(--primary-blue), var(--dark-blue));
+  color: var(--white);
+  padding: 2rem;
+  position: relative;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Línea decorativa bajo el header */
+
+.header-underline {
+  width: 100%;
+  background-color: #ffd400; /* amarillo */
+  height: 20px; /* valor inicial: será recalculado por JS al 25% del header */
+}
+
+/* ===== MAIN CONTENT ===== */
+main {
+  max-width: 1500px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+section {
+  margin-bottom: 3rem;
+}
+
+h2 {
+  color: var(--dark-blue);
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  border-bottom: 3px solid var(--primary-blue);
+  padding-bottom: 0.5rem;
+}
+
+/* ===== HERO IMAGE ===== */
+
+.hero img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero {
+  position: relative; /* contenedor para la superposición */
+  height: 45vh;
+  min-height: 300px;
+  max-height: 600px;
+  overflow: hidden;
+}
+
+/* ===== INFO BOX ===== */
+
+.info-section {
+  position: absolute;
+  left: 50%;
+  top: 86%;
+  transform: translateX(-50%) translateY(-50%);
+  /* Use a constrained width so gaps/padding don't cause overflow */
+  width: min(90%, 1200px);
+  max-width: calc(100% - 2rem);
+  display: grid;
+  /* prefer flexible tracks: main content + sidebar */
+  grid-template-columns: 2fr 50%;
+  gap: 1rem;
+  background: rgba(255, 255, 255, 0);
+  padding: 1rem;
+  border-radius: 12px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.18);
+  box-sizing: border-box;
+}
+
+/* Tarjeta de clima */
+.weather-card {
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.9),
+    rgba(255, 255, 255, 0.95)
+  );
+  border-radius: 8px;
+  padding: 1rem 1.25rem;
+  max-width: 720px;
+  margin: 1.5rem auto;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.08);
+  color: var(--dark-blue);
+  border-radius: 10px;
+}
+.weather-card h2 {
+  margin-bottom: 0.5rem;
+  font-size: 1.25rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.weather-card h2 .weather-icon {
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+  display: inline-block;
+}
+.weather-card p {
+  margin: 0.35rem 0;
+}
+
+#data {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+#weather {
+  grid-column: 3;
+  grid-row: 4;
+}
+
+/* ===== FOOTER ===== */
+footer {
+  background-color: var(--dark-gray);
+  color: var(--white);
+  text-align: center;
+  padding: 2rem;
+  margin-top: 3rem;
+}
+
+/* ===== RESPONSIVE DESIGN ===== */
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 2rem;
+  }
+  .hero {
+    height: auto;
+  }
+  .info-section {
+    position: static;
+    transform: none;
+    width: 100%;
+    grid-template-columns: 1fr;
+    margin-top: 1rem;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.08);
+    background: linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0.95),
+      rgba(255, 255, 255, 0.98)
+    );
+  }
+
+  #data {
+    width: 100%;
+    grid-column: 1/2;
+    grid-row: 1;
+  }
+  #weather {
+    width: 100%;
+    grid-column: 1/2;
+    grid-row: 2;
+  }
+}
