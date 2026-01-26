@@ -40,7 +40,7 @@ header {
 
 .header-underline {
   width: 100%;
-  background-color: #ffd400; /* amarillo */
+  background-color: var(--orange); /* amarillo */
   height: 20px; /* valor inicial: será recalculado por JS al 25% del header */
 }
 
@@ -93,7 +93,7 @@ h2 {
   /* prefer flexible tracks: main content + sidebar */
   grid-template-columns: 2fr 50%;
   gap: 1rem;
-  background: rgba(255, 255, 255, 0);
+  background: transparent;
   padding: 1rem;
   border-radius: 12px;
   box-shadow: 0 12px 30px rgba(0, 0, 0, 0.18);
@@ -107,7 +107,6 @@ h2 {
     rgba(255, 255, 255, 0.9),
     rgba(255, 255, 255, 0.95)
   );
-  border-radius: 8px;
   padding: 1rem 1.25rem;
   max-width: 720px;
   margin: 1.5rem auto;
@@ -122,11 +121,25 @@ h2 {
   align-items: center;
   gap: 0.5rem;
 }
-.weather-card h2 .weather-icon {
+
+/* Weather icon como pseudo-elemento solo en pantallas grandes */
+#weather h2::after {
+  content: "";
+  display: inline-block;
+  width: 32px;
+  height: 32px;
+  margin-left: 0.5rem;
+  vertical-align: middle;
+  background-image: url("/images/weather-svgrepo-com.svg"); /* Cambia la ruta y el nombre según tu ícono */
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.weather-icon {
   width: 32px;
   height: 32px;
   object-fit: contain;
-  display: inline-block;
+  display: none;
 }
 .weather-card p {
   margin: 0.35rem 0;
@@ -163,14 +176,12 @@ footer {
     position: static;
     transform: none;
     width: 100%;
-    grid-template-columns: 1fr;
+    max-width: 100%;
     margin-top: 1rem;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.08);
-    background: linear-gradient(
-      180deg,
-      rgba(255, 255, 255, 0.95),
-      rgba(255, 255, 255, 0.98)
-    );
+    padding: 0;
+    background: transparent;
+    box-shadow: none;
+    grid-template-columns: 1fr;
   }
 
   #data {
@@ -182,5 +193,34 @@ footer {
     width: 100%;
     grid-column: 1/2;
     grid-row: 2;
+  }
+  .weather-card h2 {
+    margin-bottom: 0.5rem;
+    font-size: 1.5rem;
+    display: inline-flex;
+    gap: 0.5rem;
+    justify-content: center; /* <-- Añade esta línea */
+    width: 100%; /* Opcional, asegura el centrado */
+  }
+
+  .weather-card p {
+    margin-bottom: 0.5rem;
+    font-size: 1.1rem;
+    display: inline-flex;
+    gap: 0.5rem;
+    justify-content: left;
+    width: 100%;
+    padding-left: 30px;
+  }
+
+  #weather h2::after {
+    display: none;
+  }
+  .weather-icon {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto;
   }
 }
