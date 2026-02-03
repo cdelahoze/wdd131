@@ -1,20 +1,13 @@
 :root {
-  /* Colores Principales */
   --color-primary: #5cc4d0;
   --color-secondary: #f7c143;
   --color-background: #f8f5e1;
-  
-  /* Colores de Texto */
   --color-text-main: #1a1a1a;
   --color-text-muted: #4a5568;
-  --color-white: #ffffff;
-
-  /* Tipografías */
-  --font-header: 'Gaegu', cursive;
-  --font-body: 'Nunito Sans', sans-serif;
+  --color-white: #fff;
+  --font-header: "Gaegu", cursive;
+  --font-body: "Nunito Sans", sans-serif;
 }
-
-/* General Styles */
 body {
   font-family: var(--font-body);
   background-color: var(--color-background);
@@ -23,17 +16,14 @@ body {
   padding: 0;
   line-height: 1.6;
 }
-
 main {
   max-width: 1200px;
   margin: 0 auto;
 }
-
 section {
   padding: 2rem;
   margin-bottom: 2rem;
 }
-
 h2 {
   font-family: var(--font-header);
   color: var(--color-text-main);
@@ -42,134 +32,119 @@ h2 {
   border-bottom: 3px solid var(--color-primary);
   padding-bottom: 0.5rem;
 }
-
 h3 {
   color: var(--color-text-main);
   font-size: 1.5rem;
   margin-bottom: 1rem;
 }
-
 p {
   margin-bottom: 1rem;
-  color: var(--color-text-main);
 }
-
-/* Site Description */
 .site-description p {
   font-size: 1.1rem;
   line-height: 1.8;
 }
-
-/* Site Logo */
 .site-logo {
   text-align: center;
 }
-
 .logo-container {
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 2rem;
 }
-
 .logo-container img {
   max-width: 300px;
   height: auto;
 }
-
-/* Site Name and Domain */
 .domain-info {
   background-color: var(--color-primary);
   padding: 1rem;
   border-radius: 5px;
   margin: 1rem 0;
 }
-
 .domain-info p {
   margin: 0;
-  color: var(--color-text-main);
 }
-
 .domain-info a {
   color: var(--color-text-main);
-  font-weight: bold;
+  font-weight: 700;
   text-decoration: none;
 }
-
 .domain-info a:hover {
   text-decoration: underline;
 }
-
-/* Site Purpose */
-.site-purpose ul {
+.site-purpose ul,
+.wcag-guidelines ul {
   list-style-type: disc;
   padding-left: 2rem;
   line-height: 1.8;
 }
-
 .site-purpose li {
   margin-bottom: 0.8rem;
-  color: var(--color-text-main);
 }
-
-/* Scenarios */
 .scenarios {
   background-color: var(--color-white);
   border-left: 5px solid var(--color-secondary);
 }
-
-.scenarios p {
+.scenarios p,
+.typography > p,
+.wireframes > p {
   font-style: italic;
   margin-bottom: 1.5rem;
 }
-
-.scenario-list {
+.scenario-list,
+.font-examples {
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
 }
-
-.scenario-item {
+.scenario-item,
+.font-item {
   background-color: var(--color-background);
   padding: 1.5rem;
   border-radius: 8px;
+}
+.scenario-item {
   border-left: 4px solid var(--color-primary);
 }
-
-.scenario-item h3 {
+.scenario-item h3,
+.font-item h3 {
   color: var(--color-primary);
   margin-bottom: 0.5rem;
+}
+.scenario-item h3 {
   font-size: 1.2rem;
 }
-
+.font-item h3 {
+  font-size: 1.4rem;
+}
 .scenario-item p {
   margin: 0;
   font-style: normal;
-  color: var(--color-text-main);
   font-size: 1.05rem;
   line-height: 1.6;
 }
-
-/* Paleta de Colores */
-.color-palette {
+.color-palette,
+.wcag-guidelines {
   padding: 2rem;
   max-width: 1200px;
   margin: 0 auto;
 }
-
-.color-palette h2 {
+.color-palette h2,
+.wcag-guidelines h2 {
   text-align: center;
-  margin-bottom: 2rem;
+  margin-bottom: 1.5rem;
   font-family: var(--font-header);
-  color: var(--color-text-main);
 }
-
+.color-palette h2 {
+  margin-bottom: 2rem;
+}
 .color-grid {
   display: flex;
   gap: 0;
   border: 1px solid #ddd;
 }
-
 .color-item {
   flex: 1;
   padding: 2rem 1rem;
@@ -179,290 +154,203 @@ p {
   flex-direction: column;
   justify-content: center;
 }
-
 .color-item h3 {
-  margin: 0 0 0.5rem 0;
+  margin: 0 0 0.5rem;
   font-size: 1.2rem;
-  font-weight: bold;
+  font-weight: 700;
 }
-
 .hex-code {
   font-family: monospace;
   font-size: 1rem;
   margin: 0.5rem 0;
-  font-weight: bold;
+  font-weight: 700;
 }
-
 .usage {
   font-size: 0.9rem;
   line-height: 1.4;
-  margin: 0.5rem 0 0 0;
+  margin: 0.5rem 0 0;
 }
-
-/* Colores individuales */
 .color-cyan {
-  background-color: #5CC4D0;
+  background-color: #5cc4d0;
   color: #1a1a1a;
 }
-
 .color-yellow {
-  background-color: #F7C143;
+  background-color: #f7c143;
   color: #1a1a1a;
 }
-
 .color-cream {
-  background-color: #F8F5E1;
+  background-color: #f8f5e1;
   color: #1a1a1a;
 }
-
 .color-black {
-  background-color: #1A1A1A;
-  color: #ffffff;
+  background-color: #1a1a1a;
+  color: #fff;
 }
-
 .color-black h3,
 .color-black .hex-code,
-.color-black .usage {
-  color: #ffffff;
-}
-
+.color-black .usage,
 .color-gray {
-  background-color: #4A5568;
-  color: #ffffff;
+  color: #fff;
 }
-
+.color-gray {
+  background-color: #4a5568;
+}
 .color-gray h3,
 .color-gray .hex-code,
 .color-gray .usage {
-  color: #ffffff;
+  color: #fff;
 }
-
-/* WCAG Guidelines */
-.wcag-guidelines {
-  padding: 2rem;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-.wcag-guidelines h2 {
-  margin-bottom: 1.5rem;
-  font-family: var(--font-header);
-  color: var(--color-text-main);
-}
-
-.wcag-guidelines ul {
-  list-style-type: disc;
-  padding-left: 2rem;
-  line-height: 1.8;
-}
-
 .wcag-guidelines li {
   margin-bottom: 1rem;
-  color: var(--color-text-main);
 }
-
-.wcag-guidelines strong {
-  color: var(--color-text-main);
-  font-weight: bold;
-}
-
-/* Typography */
 .typography {
   background-color: var(--color-white);
 }
-
 .typography > p {
   margin-bottom: 2rem;
-  font-style: italic;
 }
-
-.font-examples {
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
-}
-
 .font-item {
-  background-color: var(--color-background);
-  padding: 1.5rem;
-  border-radius: 8px;
   border: 2px solid var(--color-primary);
 }
-
-.font-item h3 {
-  color: var(--color-primary);
-  margin-bottom: 1rem;
-  font-size: 1.4rem;
-}
-
-.font-display {
+.font-display,
+.pairing-demo {
   background-color: var(--color-white);
   padding: 1.5rem;
   border-radius: 5px;
+}
+.font-display {
   margin: 1rem 0;
 }
-
-.font-heading {
-  font-family: 'Gaegu', cursive;
+.font-heading,
+.demo-heading {
+  font-family: "Gaegu", cursive;
 }
-
-.font-body {
-  font-family: 'Nunito Sans', sans-serif;
+.font-body,
+.demo-body {
+  font-family: "Nunito Sans", sans-serif;
 }
-
 .font-name {
   font-size: 0.9rem;
   color: var(--color-text-muted);
   margin-bottom: 1rem;
   font-family: var(--font-body);
 }
-
 .sample-text {
   font-size: 1.8rem;
   margin: 0.5rem 0;
-  color: var(--color-text-main);
 }
-
 .font-usage {
   margin-top: 1rem;
   line-height: 1.6;
-  color: var(--color-text-main);
 }
-
 .font-combination {
   background-color: var(--color-background);
   padding: 1.5rem;
   border-radius: 8px;
   border: 2px solid var(--color-secondary);
 }
-
 .font-combination h3 {
   color: var(--color-secondary);
   margin-bottom: 1rem;
 }
-
 .pairing-demo {
-  background-color: var(--color-white);
   padding: 2rem;
-  border-radius: 5px;
 }
-
 .demo-heading {
-  font-family: 'Gaegu', cursive;
   font-size: 2.5rem;
-  color: var(--color-text-main);
   margin-bottom: 1rem;
 }
-
 .demo-body {
-  font-family: 'Nunito Sans', sans-serif;
   font-size: 1.1rem;
   line-height: 1.8;
-  color: var(--color-text-main);
   margin: 0;
 }
 
-/* Wireframes */
 .wireframes {
   background-color: var(--color-background);
 }
-
-.wireframes > p {
-  margin-bottom: 2rem;
-  font-style: italic;
-}
-
 .wireframe-container {
   margin-bottom: 3rem;
 }
-
 .wireframe-container h3 {
   color: var(--color-primary);
   font-size: 1.8rem;
   margin-bottom: 1.5rem;
   text-align: center;
 }
-
 .wireframe-group {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 2rem;
   align-items: start;
 }
-
 .wireframe-wrapper h4 {
   text-align: center;
-  color: var(--color-text-main);
   font-size: 1.2rem;
   margin-bottom: 1rem;
 }
-
 .wireframe {
-  background-color: #ffffff;
+  background-color: #fff;
   border: 3px solid var(--color-text-main);
   padding: 0;
   margin: 0 auto;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
-
 .wireframe-mobile {
   max-width: 375px;
 }
-
-.wf-header {
-  background-color: #e0e0e0;
-  padding: 1.5rem;
+.wf-header,
+.wf-page-title,
+.wf-footer {
   text-align: center;
-  font-weight: bold;
+  font-weight: 700;
+  padding: 1.5rem;
+}
+.wf-header,
+.wf-footer {
+  background-color: #e0e0e0;
+}
+.wf-header,
+.wf-page-title,
+.wf-section {
   border-bottom: 2px solid var(--color-text-main);
 }
-
 .wf-hero {
   background-color: var(--color-primary);
   padding: 3rem 2rem;
   text-align: center;
   font-size: 1.3rem;
-  font-weight: bold;
+  font-weight: 700;
   line-height: 1.8;
   border-bottom: 2px solid var(--color-text-main);
 }
-
 .wf-page-title {
   background-color: #f0f0f0;
   padding: 2rem;
-  text-align: center;
   font-size: 1.5rem;
-  font-weight: bold;
-  border-bottom: 2px solid var(--color-text-main);
 }
-
 .wf-section {
   padding: 2rem;
-  border-bottom: 2px solid var(--color-text-main);
 }
-
 .wf-title {
   background-color: #d0d0d0;
   padding: 1rem;
   margin-bottom: 1rem;
   text-align: center;
-  font-weight: bold;
+  font-weight: 700;
 }
-
 .wf-content {
   background-color: #f5f5f5;
   padding: 1.5rem;
   text-align: center;
   line-height: 1.6;
 }
-
 .wf-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 1rem;
   padding: 2rem;
 }
-
 .wf-card {
   background-color: #f9f9f9;
   border: 2px solid #999;
@@ -474,73 +362,46 @@ p {
   flex-direction: column;
   justify-content: center;
 }
-
 .wf-two-col {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 2rem;
 }
-
-.wf-form {
-  background-color: #f5f5f5;
-  padding: 1.5rem;
-}
-
-.wf-input {
-  background-color: #ffffff;
-  border: 2px solid #999;
-  padding: 0.8rem;
-  margin-bottom: 1rem;
-}
-
-.wf-button {
-  background-color: var(--color-secondary);
-  padding: 0.8rem;
-  text-align: center;
-  font-weight: bold;
-  border: 2px solid var(--color-text-main);
-}
-
+.wf-form,
 .wf-info {
   background-color: #f5f5f5;
   padding: 1.5rem;
 }
-
-.wf-footer {
-  background-color: #e0e0e0;
-  padding: 1.5rem;
-  text-align: center;
-  font-weight: bold;
+.wf-input {
+  background-color: #fff;
+  border: 2px solid #999;
+  padding: 0.8rem;
+  margin-bottom: 1rem;
 }
-
-
-/* ===== FOOTER ===== */
+.wf-button {
+  background-color: var(--color-secondary);
+  padding: 0.8rem;
+  text-align: center;
+  font-weight: 700;
+  border: 2px solid var(--color-text-main);
+}
 footer {
   background-color: var(--color-secondary);
   color: var(--color-text-main);
   text-align: center;
-  font-weight: bold;
+  font-weight: 700;
   font-size: 1rem;
   padding: 0.5rem;
   margin-top: 1rem;
 }
-
-
-
-/* Responsive wireframes */
 @media (max-width: 768px) {
   .wireframe-group {
     grid-template-columns: 1fr;
   }
-  
   .wireframe-mobile {
     max-width: 100%;
   }
-  
-  .wf-grid {
-    grid-template-columns: 1fr;
-  }
-  
+  .wf-grid,
   .wf-two-col {
     grid-template-columns: 1fr;
   }
