@@ -513,6 +513,20 @@ p {
   font-weight: bold;
 }
 
+
+/* ===== FOOTER ===== */
+footer {
+  background-color: var(--color-secondary);
+  color: var(--color-text-main);
+  text-align: center;
+  font-weight: bold;
+  font-size: 1rem;
+  padding: 0.5rem;
+  margin-top: 1rem;
+}
+
+
+
 /* Responsive wireframes */
 @media (max-width: 768px) {
   .wireframe-group {
