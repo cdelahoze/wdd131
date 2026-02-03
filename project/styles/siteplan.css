@@ -65,14 +65,15 @@ p {
 }
 .domain-info p {
   margin: 0;
+  color: var(--color-text-main);
 }
 .domain-info a {
   color: var(--color-text-main);
   font-weight: 700;
-  text-decoration: none;
+  text-decoration: underline;
 }
 .domain-info a:hover {
-  text-decoration: underline;
+  text-decoration: none;
 }
 .site-purpose ul,
 .wcag-guidelines ul {
@@ -110,7 +111,7 @@ p {
 }
 .scenario-item h3,
 .font-item h3 {
-  color: var(--color-primary);
+  color: var(--color-text-main);
   margin-bottom: 0.5rem;
 }
 .scenario-item h3 {
@@ -124,6 +125,7 @@ p {
   font-style: normal;
   font-size: 1.05rem;
   line-height: 1.6;
+  color: var(--color-text-main);
 }
 .color-palette,
 .wcag-guidelines {
@@ -250,7 +252,7 @@ p {
   border: 2px solid var(--color-secondary);
 }
 .font-combination h3 {
-  color: var(--color-secondary);
+  color: var(--color-text-main);
   margin-bottom: 1rem;
 }
 .pairing-demo {
@@ -273,7 +275,7 @@ p {
   margin-bottom: 3rem;
 }
 .wireframe-container h3 {
-  color: var(--color-primary);
+  color: var(--color-text-main);
   font-size: 1.8rem;
   margin-bottom: 1.5rem;
   text-align: center;
