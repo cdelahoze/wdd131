@@ -11,6 +11,15 @@
         ]
       }
     ],
-    "meta-viewport": "off"
+    "meta-viewport": "off",
+    "compat-api/css": [
+      "default",
+      {
+        "ignore": [
+          "text-size-adjust",
+          "-webkit-text-decoration-skip"
+        ]
+      }
+    ]
   }
 }

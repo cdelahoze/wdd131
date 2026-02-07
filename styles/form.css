@@ -1,0 +1,216 @@
+:root {
+  --theme-color: #5b2c6f;
+  /* ...otros colores... */
+  /* Colores principales */
+  --primary-blue: #2563eb;
+  --dark-blue: #1e40af;
+  --light-blue: #60a5fa;
+  --very-light-blue: #d0dfff;
+
+  /* Colores neutrales */
+  --dark-gray: #43474d;
+  --medium-gray: #6b7280;
+  --light-gray: #f3f4f6;
+  --white: #ffffff;
+  --orange: #ffd400;
+}
+
+/* ===== ESTILOS GENERALES ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Roboto, helvetica, sans-serif;
+  color: var(--dark-gray);
+  background-color: var(--white);
+}
+
+/* ===== HEADER ===== */
+header {
+  background: linear-gradient(135deg, var(--primary-blue), var(--dark-blue));
+  color: var(--white);
+  padding: 2rem;
+  position: relative;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/*----------- MAIN --------------*/
+main {
+  padding: 0 2%;
+  min-height: 20rem;
+}
+
+/*-----------form styling-----------------*/
+form.wfl {
+  background-color: var(--very-light-blue);
+  border: 1px solid var(--light-blue);
+  border-radius: 6px;
+  padding: 2rem;
+  max-width: 600px;
+  margin: 2rem auto;
+}
+
+.wfl fieldset {
+  margin: 2rem 0;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  padding: 0.5rem 2%;
+}
+
+fieldset {
+  margin: 2rem 0;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  padding: 0.5rem 2%;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+h3, h4 {
+  color: #445ba9;
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+
+.wfl legend {
+  color: #445ba9;
+  padding: 0 0.5rem;
+  font-size: 1.2rem;
+}
+
+/* legend pequeño en cursiva para aclaraciones como "(Check all that apply)" */
+.wfl legend.italic-legend {
+  font-style: italic;
+}
+
+/* Optional label span color moved from inline style */
+.wfl .optional {
+  color: #445ba9;
+}
+
+/* Review textarea and name input styles to match desired layout */
+.wfl .review-input {
+  display: block;
+  width: 100%;
+  max-width: 800px;
+  min-height: 8rem;
+  padding: 1rem;
+  margin-top: 0.4rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background: #fff;
+  box-sizing: border-box;
+  resize: vertical;
+}
+
+.wfl .review-name {
+  display: block;
+  width: 100%;
+  max-width: 800px;
+  height: 2.4rem;
+  padding: 0.5rem;
+  margin-top: 0.4rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.wfl label {
+  display: block;
+  padding-top: 1rem;
+  color: #a94744;
+  font-size: 1.1rem;
+}
+
+.wf1 input[type="text"],
+.wfl input[type="tel"],
+.wfl input[type="email"],
+.wfl input[type="url"],
+.wfl input[type="date"],
+.wfl select,
+.wfl input[type="number"] {
+  background-color: #f0f0ee;
+  display: block;
+  margin-top: 0.4rem;
+  border: solid 1px #999;
+  border-radius: 6px;
+  padding: 0.75rem;
+  color: #111555;
+  width: 100%;
+  max-width: 400px;
+  appearance: none;
+}
+
+.wfl select {
+  background-image: url('data:image/svg+xml;charset=UTF-8,%3Csvg xmlns="http://www.w3.org/2000/svg" width="12" height="8" viewBox="0 0 12 8"%3E%3Cpolygon points="0,0 12,0 6,8" fill="%23111555"/%3E%3C/svg%3E');
+  background-repeat: no-repeat;
+  background-position: right 0.75rem center;
+  background-size: 12px;
+  padding-right: 2.5rem;
+}
+
+.wfl input[type="radio"],
+.wfl input[type="checkbox"] {
+  margin-right: 6px;
+}
+
+/* ===== STAR RATING ===== */
+.star-rating {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+  gap: 0.1rem;
+  padding: 0.5rem 0;
+}
+
+.star-rating input[type="radio"] {
+  display: none;
+}
+
+.star-rating label {
+  display: inline-block;
+  font-size: 2rem;
+  color: #ccc;
+  cursor: pointer;
+  padding: 0;
+  transition: color 0.2s;
+}
+
+.star-rating label:hover,
+.star-rating label:hover ~ label,
+.star-rating input[type="radio"]:checked ~ label {
+  color: var(--orange);
+}
+
+.wfl input[type="submit"] {
+  border: none;
+  background-image: linear-gradient(#9c2c13, #6f200e);
+  color: #fff;
+  border-radius: 6px;
+  padding: 0.8rem;
+  width: 96%;
+  max-width: 400px;
+  margin: -1rem 2% 2rem 2%;
+  box-shadow: 1px 1px 4px #999;
+}
+
+.wfl input:required {
+  border-right: solid 8px red;
+}
+.wfl input:required:valid {
+  border-right: solid 8px green;
+}
+
+/* ===== FOOTER ===== */
+footer {
+  background-color: var(--dark-gray);
+  color: var(--white);
+  text-align: center;
+  padding: 2rem;
+  margin-top: 3rem;
+}
