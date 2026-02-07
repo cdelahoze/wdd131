@@ -1,25 +1,24 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="theme-color" content="#5B2C6F" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#5B2C6F">
     <meta
       name="description"
       content="Cristian De La Hoz's portfolio for WDD 131 – Dynamic Web Fundamentals at BYU-Idaho with projects and resources."
-    />
-    <meta name="keywords" content="web development, final project" />
-    <meta name="author" content="Cristian M De La Hoz Escorcia" />
+    >
+    <meta name="keywords" content="web development, final project">
+    <meta name="author" content="Cristian M De La Hoz Escorcia">
     <title>
       WDD 131 – Dynamic Web Fundamentals – Cristian Moisés De La Hoz Escorcia
     </title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="styles/form.css" />
+      rel="stylesheet">
+    <link rel="stylesheet" href="styles/form.css">
     <script src="scripts/form.js" defer></script>
   </head>
   <body>
@@ -29,48 +28,41 @@
     <main>
       <form method="get" action="review.html" class="wfl">
         <fieldset>
-          <label for="product">Product Name</label>
+          <label for="product">Product Name*</label>
           <select id="product" name="product" required>
             <option value="" disabled selected>Select a Product ...</option>
           </select>
-
-          <label for="rating">Overall Rating</label>
-          <div class="star-rating" aria-label="Overall rating">
-            <input type="radio" name="rating" id="star5" value="5" required />
+          <div class="field-label">Overall Rating*</div>
+          <div class="star-rating">
+            <input type="radio" name="rating" id="star5" value="5" required>
             <label for="star5" title="5 stars">&#9733;</label>
-            <input type="radio" name="rating" id="star4" value="4" />
+            <input type="radio" name="rating" id="star4" value="4" required>
             <label for="star4" title="4 stars">&#9733;</label>
-            <input type="radio" name="rating" id="star3" value="3" />
+            <input type="radio" name="rating" id="star3" value="3" required>
             <label for="star3" title="3 stars">&#9733;</label>
-            <input type="radio" name="rating" id="star2" value="2" />
+            <input type="radio" name="rating" id="star2" value="2" required>
             <label for="star2" title="2 stars">&#9733;</label>
-            <input type="radio" name="rating" id="star1" value="1" />
+            <input type="radio" name="rating" id="star1" value="1" required>
             <label for="star1" title="1 star">&#9733;</label>
           </div>
-
           <label for="completiondate">Date of Installation</label>
-          <input id="completiondate" type="date" name="completiondate" required />
+          <input id="completiondate" type="date" name="completiondate" required>
         </fieldset>
-
         <fieldset>
-          <legend>Which features did you find useful in the product?</legend>
-          <legend class="italic-legend">(Check all that apply)</legend>
-          <label for="editing"><input type="checkbox" id="editing" name="features" value="editing" /> Durability</label>
-          <label for="code"><input type="checkbox" id="code" name="features" value="code" /> Ease of Use</label>
-          <label for="process"><input type="checkbox" id="process" name="features" value="process" /> Performance</label>
-          <label for="client"><input type="checkbox" id="client" name="features" value="client" /> Design</label>
+          <legend>Which features did you find useful in the product? <span class="italic-legend">(Check all that apply)</span></legend>
+          <label for="editing"><input type="checkbox" id="editing" name="features" value="editing"> Durability</label>
+          <label for="code"><input type="checkbox" id="code" name="features" value="code"> Ease of Use</label>
+          <label for="process"><input type="checkbox" id="process" name="features" value="process"> Performance</label>
+          <label for="client"><input type="checkbox" id="client" name="features" value="client"> Design</label>
         </fieldset>
-
         <fieldset>
           <legend>Write your review</legend>
           <label for="review">Written Review <span class="optional">(Optional)</span></label>
           <textarea id="review" name="review" class="review-input" placeholder="Write your review here..."></textarea>
-
           <label for="reviewer">Your Name <span class="optional">(Optional)</span></label>
-          <input id="reviewer" type="text" name="reviewer" class="review-name" />
+          <input id="reviewer" type="text" name="reviewer" class="review-name">
         </fieldset>
-
-        <input type="submit" value="Post Review" class="submitBtn" />
+        <input type="submit" value="Post Review" class="submitBtn">
       </form>
     </main>
     <footer>
