@@ -11,7 +11,7 @@ section h2 {
   color: var(--color-text-main);
   text-align: center;
   margin-bottom: 1.5rem;
-  border-bottom: 3px solid var(--color-primary);
+  border-bottom: 3px solid var(--color-text-main);
   padding-bottom: 0.5rem;
   display: inline-block;
   width: 100%;
@@ -41,12 +41,12 @@ section h2 {
 }
 
 .study-section h2 {
-  color: var(--color-white);
+  color: var(--color-text-main);
   border-bottom-color: var(--color-white);
 }
 
 .study-section .intro-text {
-  color: var(--color-white);
+  color: var(--color-text-main);
 }
 
 .pathways-grid {
@@ -71,7 +71,7 @@ section h2 {
 .pathway-card h3 {
   font-family: var(--font-header);
   font-size: 1.5rem;
-  color: var(--color-primary);
+  color: var(--color-text-main);
   margin-bottom: 1rem;
 }
 
@@ -114,7 +114,7 @@ section h2 {
 .teacher-card h3 {
   font-family: var(--font-header);
   font-size: 1.4rem;
-  color: var(--color-primary);
+  color: var(--color-text-main);
   margin-bottom: 1rem;
 }
 
@@ -152,7 +152,7 @@ section h2 {
 .benefit-card h3 {
   font-family: var(--font-header);
   font-size: 1.5rem;
-  color: var(--color-secondary);
+  color: var(--color-text-main);
   margin-bottom: 1rem;
 }
 
@@ -192,7 +192,7 @@ section h2 {
 .card-number {
   font-size: 3rem;
   font-weight: 700;
-  color: var(--color-primary);
+  color: var(--color-text-main);
   margin-bottom: 1rem;
 }
 
@@ -216,7 +216,7 @@ section h2 {
 }
 
 .testimonials-section h2 {
-  color: var(--color-white);
+  color: var(--color-text-main);
   border-bottom-color: var(--color-white);
 }
 
@@ -246,7 +246,7 @@ section h2 {
 .testimonial-quote::before {
   content: '"';
   font-size: 3rem;
-  color: var(--color-primary);
+  color: var(--color-text-main);
   position: absolute;
   top: 0.5rem;
   left: 1rem;
@@ -255,7 +255,7 @@ section h2 {
 
 .testimonial-author {
   font-weight: 700;
-  color: var(--color-primary);
+  color: var(--color-text-main);
   text-align: right;
   margin: 0;
 }
@@ -270,7 +270,7 @@ section h2 {
 }
 
 .cta-section h2 {
-  color: var(--color-white);
+  color: var(--color-text-main);
   border: none;
   font-size: clamp(2rem, 5vw, 3.5rem);
   margin-bottom: 1rem;
@@ -279,14 +279,14 @@ section h2 {
 .cta-section p {
   font-size: clamp(1.2rem, 3vw, 1.8rem);
   margin-bottom: 2rem;
-  color: var(--color-white);
+  color: var(--color-text-main);
 }
 
 .cta-button {
   display: inline-block;
   padding: 1rem 3rem;
   background-color: var(--color-white);
-  color: var(--color-primary);
+  color: var(--color-text-main);
   font-size: 1.2rem;
   font-weight: 700;
   text-decoration: none;
