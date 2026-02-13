@@ -1,0 +1,94 @@
+/* Gallery container with flexbox */
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 0.5rem;
+}
+
+/* Gallery items: side-by-side on desktop and tablet, stacked on small screens */
+.gallery-item {
+  box-sizing: border-box;
+  flex: 0 1 30%;
+  max-width: 30%;
+  border: 1px solid hsl(35, 70%, 95%);
+  transition: border 0.3s;
+}
+
+.gallery-item:hover {
+  border: 1px solid var(--color-secondary);
+}
+
+/* Description text */
+.desc {
+  padding: 15px;
+  text-align: center;
+  font-family: var(--font-header);
+  font-size: clamp(1rem, 2vw, 1.5rem);
+}
+
+/* Lessons heading */
+.lessons {
+  padding: 15px;
+  text-align: center;
+  font-family: var(--font-header);
+  font-size: clamp(3vw, 4vw, 5vw);
+  margin: 0 auto;
+}
+
+/* Image container and images */
+.image-container {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 12 / 9;
+  overflow: hidden;
+}
+
+.image {
+  position: absolute;
+  top: 8%;
+  left: 11%;
+  width: 72%;
+  height: 86%;
+  object-fit: cover;
+  z-index: 1;
+}
+
+.overlay-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  pointer-events: none;
+  z-index: 2;
+}
+
+/* Lazy loading images */
+.gallery-item img[data-src] {
+  opacity: 0.5;
+  transition: opacity 0.3s ease-in;
+}
+
+.gallery-item img.loaded {
+  opacity: 1;
+}
+
+/* Tablet breakpoint */
+@media only screen and (max-width: 700px) {
+  .gallery-item {
+    flex: 0 1 48%;
+    max-width: 48%;
+  }
+}
+
+/* Mobile breakpoint */
+@media only screen and (max-width: 500px) {
+  .gallery-item {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
+}

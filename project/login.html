@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#5B2C6F" />
+    <meta
+      name="description"
+      content="Online English classes with native teachers for Spanish speakers. Improve your pronunciation and fluency using interactive tools optimized for Microsoft Edge."
+    />
+    <meta name="keywords" content="web development, final project" />
+    <meta name="author" content="Cristian M De La Hoz Escorcia" />
+    <link rel="icon" href="./images/taktaim-p.ico" type="image/x-icon" />
+    <title>TakTaim – Speak . Learn . Fast</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Gaegu:wght@400;700&family=Nunito+Sans:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles/index.css" />
+    <link rel="stylesheet" href="./styles/login.css" />
+    <script src="./scripts/index.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <div class="logo-container">
+        <img
+          src="./images/logo_taktime.svg"
+          alt="Talk Time Institute Logo"
+          width="120"
+          height="40"
+        />
+        <button id="menu-toggle" aria-label="Toggle menu">☰</button>
+        <nav class="navigation">
+          <a href="index.html">Home</a>
+          <a href="login.html">Log in</a>
+        </nav>
+      </div>
+    </header>
+    <main>
+      <form method="get" action="./lessons.html" class="wfl" id="login">
+        <h3>Welcome Back!</h3>
+        <legend>Sign in</legend>
+        <p class="switch-form">
+          Don’t have an account?
+          <a id="register-link" href="./signup.html">Register</a>
+        </p>
+        <fieldset>
+          <label
+            >Username*
+            <input
+              type="email"
+              name="email"
+              placeholder="someone@gmail.com"
+              autocomplete="email"
+              required
+            />
+          </label>
+          <label
+            >Password*
+            <input
+              type="password"
+              name="password"
+              autocomplete="current-password"
+              required
+            />
+          </label>
+        </fieldset>
+        <input type="submit" value="Log in" class="submitBtn" />
+      </form>
+      <form method="get" action="ourclass.html" class="wfl" id="register">
+        <fieldset>
+          <legend>Register Information</legend>
+          <label
+            >First Name*
+            <input
+              type="text"
+              name="fname"
+              autocomplete="given-name"
+              required
+            />
+          </label>
+          <label
+            >Last Name*
+            <input type="text" name="lname" autocomplete="family-name" required
+          /></label>
+          <label
+            >Phone
+            <input
+              type="tel"
+              name="phone"
+              placeholder="1235551234"
+              autocomplete="tel"
+            />
+          </label>
+          <label
+            >Email*
+            <input
+              type="email"
+              name="email"
+              placeholder="someone@gmail.com"
+              autocomplete="email"
+              required
+          /></label>
+          <label>
+            Password*
+            <input
+              type="text"
+              name="test"
+              autocomplete="current-password"
+              required
+              pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*])[A-Za-z\d!@#$%^&*]{6,10}$"
+              title="6 to 10 characters inclusive with at least one number, one special character, one uppercase and one lowercase letter."
+            />
+          </label>
+          <h4 id="confirmed">
+            "Registration confirmed. Start exploring everything we have for
+            you."
+          </h4>
+        </fieldset>
+        <input type="submit" value="Register" class="submitBtn" />
+      </form>
+    </main>
+    <footer>
+      <p><span id="currentyear"></span></p>
+      <p id="lastModified"></p>
+    </footer>
+  </body>
+</html>

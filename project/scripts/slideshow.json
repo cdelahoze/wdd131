@@ -1,0 +1,29 @@
+[
+  {
+    "src":"mostaza-1024w.webp",
+    "srcset":"mostaza-480w.webp 480w, mostaza-1024w.webp 1024w, mostaza-1920w.webp 1920w",
+    "sizes":"(max-width: 480px) 480px, (max-width: 1024px) 1024px, 1920px",
+    "alt":"fondo mostaza",
+    "h1":"Welcome to TakTaim",
+    "text":"Learn English with native teachers",
+    "textColor":"#1a1a1a"
+  },
+  {
+    "src":"blue-light-1024w.webp",
+    "srcset":"blue-light-480w.webp 480w, blue-light-1024w.webp 1024w, blue-light-1920w.webp 1920w",
+    "sizes":"(max-width: 480px) 480px, (max-width: 1024px) 1024px, 1920px",
+    "alt":"fondo azul claro",
+    "h1":"Speak . Learn . Fast",
+    "text":"Interactive online platform",
+    "textColor":"#ffffff"
+  },
+  {
+    "src":"caramel-1024w.webp",
+    "srcset":"caramel-480w.webp 480w, caramel-1024w.webp 1024w, caramel-1920w.webp 1920w",
+    "sizes":"(max-width: 480px) 480px, (max-width: 1024px) 1024px, 1920px",
+    "alt":"fondo caramelo",
+    "h1":"Practice Your Pronunciation",
+    "text":"With native English teachers",
+    "textColor":"#1a1a1a"
+  }
+]

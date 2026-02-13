@@ -1,0 +1,56 @@
+[
+    {
+      "id": 1,
+      "idCourse": 1,
+      "name": "Course 1",
+      "category": "Beginner"
+    },
+    {
+      "id": 2,
+      "idCourse": 2,
+      "name": "Course 2",
+      "category": "Beginner"
+    },
+    {
+      "id": 3,
+      "idCourse": 3,
+      "name": "Course 3",
+      "category": "Beginner" 
+    },
+    {
+      "id": 4,
+      "idCourse": 4,
+      "name": "Course 4" ,
+      "category": "Intermediate"
+    },
+    {
+      "id": 5,
+      "idCourse": 5,
+      "name": "Course 5",
+      "category": "Intermediate"
+    },
+    {
+      "id": 6,
+      "idCourse": 6,
+      "name": "Course 6",
+      "category": "Intermediate"
+    },
+    {
+      "id": 7,
+      "idCourse": 7,
+      "name": "Course 7",
+      "category": "Advanced" 
+    },
+    {
+      "id": 8,
+      "idCourse": 8,
+      "name": "Course 8",
+      "category": "Advanced" 
+    },
+    {
+      "id": 9,
+      "idCourse": 9,
+      "name": "Course 9",
+      "category": "Advanced"
+    }
+  ]

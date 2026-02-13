@@ -1,0 +1,271 @@
+:root {
+  --color-primary: #5cc4d0;
+  --color-secondary: #f7c143;
+  --color-background: #f8f5e1;
+  --color-text-main: #1a1a1a;
+  --color-text-muted: #4a5568;
+  --color-white: #fff;
+  --font-header: "Gaegu", cursive;
+  --font-body: "Nunito Sans", sans-serif;
+  --font-display: "Amatic SC", cursive;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--color-background);
+  color: var(--color-text-main);
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+}
+
+/* Aplicar la fuente a los títulos */
+h1 {
+  font-family: var(--font-display);
+  font-size: 3rem; /* Al ser delgada, queda mejor en tamaños grandes */
+  font-weight: 700;
+  text-transform: uppercase; /* Para que sea toda en mayúsculas como en la imagen */
+  color: #333;
+}
+
+main {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+section {
+  padding: 2rem;
+  margin-bottom: 2rem;
+}
+
+h2 {
+  font-family: var(--font-header);
+  color: var(--color-text-main);
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  border-bottom: 3px solid var(--color-primary);
+  padding-bottom: 0.5rem;
+}
+
+h3 {
+  color: var(--color-text-main);
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+p {
+  margin-bottom: 1rem;
+}
+
+/* Logo y navegación */
+.logo-container {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  padding: 2rem;
+}
+
+.logo-container img {
+  max-width: 300px;
+  height: auto;
+  order: 2;
+  margin-left: 0.5rem;
+}
+
+/* Menu hamburguesa */
+#menu-toggle {
+  display: block;
+  position: fixed;
+  top: 0.5rem;
+  right: 0.5rem;
+  background: none;
+  border: none;
+  color: var(--color-text-main);
+  font-size: 2rem;
+  padding: 0.5rem;
+  cursor: pointer;
+  z-index: 1001;
+}
+
+nav,
+.navigation {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  order: 4;
+}
+
+.navigation a {
+  display: block;
+  color: var(--color-text-main);
+  padding: 0.5rem;
+  font-size: 1rem;
+  text-decoration: none;
+  text-align: center;
+  background-color: var(--color-background);
+  border-bottom: 1px solid var(--color-secondary);
+  transition: background-color 0.3s ease;
+}
+
+.navigation a {
+  background-color: var(--color-background);
+  border-bottom: none;
+  background-color: var(--color-background);
+  border-bottom: none;
+  padding: 0rem 0.5rem;
+  font-size: 0.8rem;
+}
+
+.navigation a:hover {
+  background-color: var(--color-secondary);
+}
+
+
+/* Active navigation link */
+.navigation a.active-link {
+  background-color: var(--color-secondary);
+  font-weight: 700;
+}
+
+@media (min-width: 1025px) {
+  .navigation a.active-link {
+    border-bottom: 3px solid var(--color-primary);
+  }
+}
+
+
+/* Dropdown menus */
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+.dropdown .dropbtn {
+  font-size: 1rem;
+  border: none;
+  outline: none;
+  color: var(--color-text-main);
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+  cursor: pointer;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: var(--color-white);
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  float: none;
+  color: var(--color-text-main);
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+  font-size: 1rem;
+}
+
+.dropdown:hover .dropbtn {
+  background-color: var(--color-secondary);
+  color: var(--color-text-main);
+}
+
+.dropdown-content a:hover {
+  background-color: #f0f0f0;
+  color: var(--color-text-main);
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Smooth scrolling para navegación interna */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Ajuste para el scroll offset debido al header fijo */
+section[id] {
+  scroll-margin-top: 80px;
+}
+
+/* Responsive - Mobile */
+@media (max-width: 640px) {
+  .navigation:not(.open) {
+    display: none;
+  }
+
+  .logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem 1.25rem;
+    position: relative;
+  }
+
+  .logo-container img {
+    margin: 0 auto;
+    order: 0;
+  }
+
+  #menu-toggle {
+    position: fixed;
+    right: 0.5rem;
+    top: 0.5rem;
+    transform: none;
+    order: 1;
+  }
+}
+
+/* Responsive - Tablets y Desktop */
+@media (min-width: 640px) {
+  #menu-toggle {
+    display: none;
+  }
+
+  .navigation {
+    display: flex;
+    flex-direction: row;
+    width: auto;
+    order: 2;
+    margin-left: auto;
+  }
+
+  .navigation a {
+    background-color: var(--color-background);
+    border-bottom: none;
+    padding: 0.75vw 1vw;
+    font-size: 1.9vw;
+  }
+
+  .navigation a:hover {
+    background-color: var(--color-secondary);
+  }
+
+  .dropdown .dropbtn {
+    padding: 0.75vw 1vw;
+    font-size: 1.9vw;
+  }
+
+  .dropdown-content a {
+    font-size: 1vw;
+    padding: 0.5vw 1vw;
+  }
+}
+
+/* Footer */
+footer {
+  background-color: var(--color-secondary);
+  color: var(--color-text-main);
+  text-align: center;
+  font-weight: 700;
+  font-size: 1rem;
+  padding: 0.5rem;
+  margin-top: 1rem;
+}

@@ -1,0 +1,62 @@
+/*======ICON BAR========*/
+
+.icon-bar {
+  width: 8vw;
+  background-color: var(--color-primary);
+}
+
+.icon-bar a {
+  display: block;
+  text-align: center;
+  padding: 0;
+  width: 8vw;
+  height: 10vw;
+  transition: all 0.3s ease;
+  color: var(--color-text-main);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon-bar a:hover {
+  background-color: var(--color-secondary);
+}
+
+.active {
+  background-color: var(--color-background);
+}
+
+/* Icon images inside the bar */
+.icon-bar a img {
+  width: 90%;
+  height: 90%;
+  display: block;
+  object-fit: contain;
+}
+
+/* Mobile: show icon-bar horizontally and make it smaller */
+@media (max-width: 640px) {
+  .icon-bar {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+  }
+
+  .icon-bar a {
+    width: 16.66%;
+    height: 60px;
+    padding: 0 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .icon-bar a img {
+    width: 60%;
+    height: 60%;
+    object-fit: contain;
+  }
+}

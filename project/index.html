@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#5B2C6F" />
+    <meta
+      name="description"
+      content="Online English classes with native teachers for Spanish speakers. Improve your pronunciation and fluency using interactive tools optimized for Microsoft Edge."
+    />
+    <meta name="keywords" content="web development, final project" />
+    <meta name="author" content="Cristian M De La Hoz Escorcia" />
+    <link rel="icon" href="./images/taktaim-p.ico" type="image/x-icon" />
+    <title>TakTaim – Speak . Learn . Fast</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Gaegu:wght@400;700&family=Nunito+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./styles/index.css" />
+    <link rel="stylesheet" href="./styles/slideshow.css" />
+    <link rel="stylesheet" href="./styles/home-sections.css" />
+    <script src="./scripts/index.js" defer></script>
+    <script src="./scripts/slideshow.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <div class="logo-container">
+        <img
+          src="./images/logo_taktime.svg"
+          alt="Talk Time Institute Logo"
+          width="120"
+          height="40"
+        />
+        <button id="menu-toggle" aria-label="Toggle menu">☰</button>
+        <nav class="navigation">
+          <a href="#home">Home</a>
+          <a href="#about">About Us</a>
+          <a href="#study">Study</a>
+          <a href="#teachers">Teachers</a>
+          <a href="#why">Why Us</a>
+          <a href="#pricing">Pricing</a>
+          <a href="#testimonials">Testimonials</a>
+          <a href="login.html">Log in</a>
+        </nav>
+      </div>
+    </header>
+    <main>
+      <!-- Slideshow -->
+      <section id="home" class="slideshow-section">
+        <div class="slideshow-container">
+          <div class="slideshow-wrapper">
+            <!-- Las slides se generarán dinámicamente aquí -->
+          </div>
+          
+          <!-- Controles de navegación -->
+          <button class="slide-control prev" aria-label="Previous slide">&#10094;</button>
+          <button class="slide-control next" aria-label="Next slide">&#10095;</button>
+          
+          <!-- Indicadores de puntos -->
+          <div class="slide-dots"></div>
+        </div>
+      </section>
+
+      <!-- About Us Section -->
+      <section id="about" class="about-section">
+        <h2>About Us</h2>
+        <p class="intro-text">We are a professional-level language training platform designed to help students apply communication skills in real-world career settings. Our mission is to transform language learning into a tool for professional success through rigor and directed practice.</p>
+      </section>
+
+      <!-- Study Section -->
+      <section id="study" class="study-section">
+        <h2>Study</h2>
+        <p class="intro-text">Our program is not about "reviewing" the basics; we require students to go beyond their previous knowledge. We offer two primary pathways:</p>
+        <div class="pathways-grid">
+          <div class="pathway-card">
+            <h3>Certification Focus</h3>
+            <p>Intensive preparation to obtain professional-level global certifications.</p>
+          </div>
+          <div class="pathway-card">
+            <h3>Developmental Projects</h3>
+            <p>Linguistic immersion through real-world projects that require researching, designing, and implementing communication solutions.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Teachers Section -->
+      <section id="teachers" class="teachers-section">
+        <h2>Your Teachers</h2>
+        <p class="intro-text">We feature a dedicated team of instructors and mentors committed to your growth:</p>
+        <div class="teachers-grid">
+          <div class="teacher-card">
+            <div class="card-icon">👨‍🏫</div>
+            <h3>Expert Instructors</h3>
+            <p>Responsible for approving your personalized study plan and overseeing your weekly progress.</p>
+          </div>
+          <div class="teacher-card">
+            <div class="card-icon">🤝</div>
+            <h3>Professional Mentors</h3>
+            <p>You will identify and work with a mentor to facilitate the successful completion of your goals and develop collaboration skills.</p>
+          </div>
+          <div class="teacher-card">
+            <div class="card-icon">🎤</div>
+            <h3>Presentation Practice Center</h3>
+            <p>Specialized staff who provide verbal and written feedback to polish your presentations before you face the real world.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Why Study Section -->
+      <section id="why" class="why-study-section">
+        <h2>Why Study With Us?</h2>
+        <div class="benefits-grid">
+          <div class="benefit-card">
+            <h3>Measurable Results</h3>
+            <p>We use SMART goals as a guide to ensure every milestone is specific and achievable within a set timeframe.</p>
+          </div>
+          <div class="benefit-card">
+            <h3>Client-Oriented</h3>
+            <p>You will learn to communicate clearly and appropriately with real clients, adding value to international organizations.</p>
+          </div>
+          <div class="benefit-card">
+            <h3>Professional Autonomy</h3>
+            <p>We foster self-directed and self-sustained students who persevere until they complete complex goals.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Pricing Section -->
+      <section id="pricing" class="pricing-section">
+        <h2>Course Pricing (Investment & Commitment)</h2>
+        <p class="intro-text">More than a monetary cost, we require a commitment to excellence to guarantee your fluency:</p>
+        <div class="commitment-grid">
+          <div class="commitment-card">
+            <div class="card-number">130+</div>
+            <h3>Time Investment</h3>
+            <p>A minimum of 130 hours of active effort is required to complete the level.</p>
+          </div>
+          <div class="commitment-card">
+            <div class="card-number">📊</div>
+            <h3>Transparency</h3>
+            <p>You will report weekly on your progress, time spent, and goal fulfillment.</p>
+          </div>
+          <div class="commitment-card">
+            <div class="card-number">✓</div>
+            <h3>Final Evaluation</h3>
+            <p>The course concludes with a recorded professional presentation and a self-assessment of the objectives achieved.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Testimonials Section -->
+      <section id="testimonials" class="testimonials-section">
+        <h2>What Students Are Saying…</h2>
+        <div class="testimonials-grid">
+          <div class="testimonial-card">
+            <p class="testimonial-quote">"The course demanded that I grow professionally and prepared me for my current career."</p>
+            <p class="testimonial-author">— Former Student</p>
+          </div>
+          <div class="testimonial-card">
+            <p class="testimonial-quote">"Thanks to the weekly reports and my mentor's guidance, I was able to successfully complete my certification."</p>
+            <p class="testimonial-author">— Certified Student</p>
+          </div>
+          <div class="testimonial-card">
+            <p class="testimonial-quote">"The feedback from the Presentation Practice Center was key to my final presentation before the client."</p>
+            <p class="testimonial-author">— Professional Student</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Call to Action -->
+      <section class="cta-section">
+        <h2>Ready to Transform Your Career?</h2>
+        <p>Start your journey with TakTaim today</p>
+        <a href="login.html" class="cta-button">Explore Our Courses</a>
+      </section>
+    </main>
+    
+    <footer>
+      <p><span id="currentyear"></span></p>
+      <p id="lastModified"></p>
+    </footer>
+  </body>
+</html>

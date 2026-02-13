@@ -1,0 +1,157 @@
+/*-----------form styling-----------------*/
+/* Hide register form by default; shown when user clicks Register */
+#register, 
+#confirmed {
+  display: none;
+}
+
+form.wfl {
+  background-color: var(--color-background);
+  border: 1px solid var(--color-secondary);
+  border-radius: 6px;
+  padding: 2rem;
+  max-width: 420px;
+  margin: 2rem auto;
+}
+
+.wfl fieldset {
+  margin: 2rem 0;
+  border: 1px solid var(--color-secondary);
+  border-radius: 6px;
+  padding: 0.5rem 2%;
+}
+
+h3,
+h4 {
+  color: #445ba9;
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+
+.wfl legend {
+  color: var(--color-text-main);
+  padding: 0 0.5rem;
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+.wfl label {
+  display: block;
+  padding-top: 1rem;
+  color: var(--color-text-main);
+  font-size: 1.1rem;
+}
+
+.wfl input[type="text"],
+.wfl input[type="tel"],
+.wfl input[type="email"],
+.wfl input[type="password"],
+.wfl select {
+  background-color: var(--color-white);
+  display: block;
+  border: solid 1px #999;
+  border-radius: 6px;
+  padding: 0.75rem;
+  color: var(--color-text-main);
+  width: 100%;
+  max-width: 400px;
+  font-size: 1.1rem;
+  box-sizing: border-box;
+}
+
+.wfl select {
+  background-image: url('data:image/svg+xml;charset=UTF-8,%3Csvg xmlns="http://www.w3.org/2000/svg" width="12" height="8" viewBox="0 0 12 8"%3E%3Cpolygon points="0,0 12,0 6,8" fill="%23111555"/%3E%3C/svg%3E');
+  background-repeat: no-repeat;
+  background-position: right 0.75rem center;
+  background-size: 12px;
+  padding-right: 2.5rem;
+  appearance: none;
+}
+
+.wfl input[type="submit"] {
+  border: none;
+  background-image: linear-gradient(
+    var(--color-background),
+    var(--color-secondary)
+  );
+  color: var(--color-text-main);
+  border-radius: 6px;
+  font-size: large;
+  font-weight: 400;
+  padding: 0.8rem;
+  width: 96%;
+  max-width: 500px;
+  margin: 1rem 2%;
+  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.12);
+  cursor: pointer;
+}
+
+.wfl input[type="submit"]:hover {
+  background-image: linear-gradient(
+    var(--color-secondary),
+    var(--color-primary)
+  );
+}
+
+.wfl input:required {
+  border-right: solid 8px red;
+}
+
+.wfl input:required:valid {
+  border-right: solid 8px green;
+}
+
+.wfl input[type="text"]:invalid,
+.wfl input[type="email"]:invalid,
+.wfl input[type="password"]:invalid {
+  background-color: #ffe6e6;
+  color: #c00;
+}
+
+.switch-form {
+  text-align: center;
+  margin: 1rem 0;
+  font-size: 0.95rem;
+}
+
+.switch-form a {
+  color: var(--color-primary);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.switch-form a:hover {
+  text-decoration: underline;
+}
+
+/* ===== RESPONSIVE MEDIA QUERIES ===== */
+@media (max-width: 640px) {
+  form.wfl {
+    padding: 1rem;
+    margin: 1rem;
+    max-width: 96%;
+  }
+
+  .wfl input[type="text"],
+  .wfl input[type="email"],
+  .wfl input[type="password"],
+  .wfl input[type="tel"],
+  .wfl select {
+    max-width: 100%;
+  }
+
+  .wfl legend {
+    font-size: 1.2rem;
+  }
+
+  .wfl input[type="submit"] {
+    width: 100%;
+    margin: 1rem 0;
+  }
+}
+
+@media (min-width: 900px) {
+  form.wfl {
+    max-width: 420px;
+  }
+}
