@@ -23,11 +23,16 @@ function saveLastFilter(courseId) {
 }
 
 async function loadLessons() {
+  // Mostrar estado de carga
+  if (gallery) {
+    gallery.innerHTML = '<p class="gallery-message">⏳ Loading lessons…</p>';
+  }
+
   try {
     const res = await fetch("./scripts/lessons.json");
-    if (!res.ok) throw new Error("No se pudo cargar lessons.json");
+    if (!res.ok) throw new Error(`HTTP error ${res.status}`);
     const data = await res.json();
-    allLessons = data; // Guardar en memoria
+    allLessons = data;
     
     // Cargar el último filtro usado
     const lastCourseId = loadLastFilter();
@@ -38,6 +43,12 @@ async function loadLessons() {
     }
   } catch (e) {
     console.error(e);
+    if (gallery) {
+      gallery.innerHTML = `<p class="gallery-message gallery-error">
+        ⚠️ Could not load lessons. Please open this page through a web server (e.g. VS Code Live Server).
+        <br><small>${e.message}</small>
+      </p>`;
+    }
   }
 }
 

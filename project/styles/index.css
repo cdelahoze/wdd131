@@ -57,6 +57,15 @@ p {
   margin-bottom: 1rem;
 }
 
+/* Header sticky */
+header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background-color: var(--color-background);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+}
+
 /* Logo y navegación */
 .logo-container {
   display: flex;
@@ -108,12 +117,9 @@ nav,
 }
 
 .navigation a {
-  background-color: var(--color-background);
-  border-bottom: none;
-  background-color: var(--color-background);
-  border-bottom: none;
   padding: 0rem 0.5rem;
   font-size: 0.8rem;
+  border-bottom: none;
 }
 
 .navigation a:hover {

@@ -67,9 +67,6 @@ if (registerForm) {
 if (menuToggle && navigation) {
   menuToggle.addEventListener("click", () => {
     navigation.classList.toggle("open");
-    if (logoImg) {
-      logoImg.style.display = navigation.classList.contains("open") ? "none" : "";
-    }
   });
 }
 
@@ -80,59 +77,45 @@ if (navigation) {
     link.addEventListener("click", () => {
       if (navigation.classList.contains("open")) {
         navigation.classList.remove("open");
-        if (logoImg) {
-          logoImg.style.display = "";
-        }
       }
     });
   });
 }
 
-// Section visibility management
-function showOnlySection(sectionId) {
-  const sections = document.querySelectorAll('main section[id]');
-  
-  if (sectionId === 'home') {
-    // Show all sections
-    sections.forEach(section => {
-      section.style.display = '';
-    });
-  } else {
-    // Hide all sections except the target
-    sections.forEach(section => {
-      if (section.id === sectionId) {
-        section.style.display = '';
-      } else {
-        section.style.display = 'none';
-      }
-    });
-  }
-}
-
-// Handle navigation clicks
+// Handle navigation clicks — scroll to section and mark active link
 document.addEventListener('DOMContentLoaded', () => {
   const navLinks = document.querySelectorAll('.navigation a[href^="#"]');
-  
+
   navLinks.forEach(link => {
     link.addEventListener('click', (e) => {
       e.preventDefault();
       const targetId = link.getAttribute('href').substring(1);
-      
-      // Show only the target section (or all if home)
-      showOnlySection(targetId);
-      
-      // Scroll to the section
+
       const targetSection = document.getElementById(targetId);
       if (targetSection) {
         targetSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
       }
-      
+
       // Update active link
       navLinks.forEach(l => l.classList.remove('active-link'));
       link.classList.add('active-link');
     });
   });
-  
-  // Show all sections on initial load
-  showOnlySection('home');
+
+  // Mark active link on scroll using IntersectionObserver
+  const sections = document.querySelectorAll('main section[id]');
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const id = entry.target.id;
+          navLinks.forEach(l => {
+            l.classList.toggle('active-link', l.getAttribute('href') === `#${id}`);
+          });
+        }
+      });
+    },
+    { threshold: 0.4 }
+  );
+  sections.forEach(s => observer.observe(s));
 });
